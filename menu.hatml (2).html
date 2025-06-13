@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menù Pizze da Fra²</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fff8f0;
+            color: #4b342f;
+            margin: 0;
+            padding: 0 15px;
+        }
+        header {
+            text-align: center;
+            padding: 25px 0;
+            background: #d96f45;
+            color: white;
+            font-size: 2.4em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 10px rgb(217 111 69 / 0.7);
+        }
+        h2 {
+            border-bottom: 2px solid #d96f45;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            color: #a03a0b;
+        }
+        .pizza {
+            background: #fff;
+            margin: 15px 0;
+            border-radius: 10px;
+            padding: 15px 20px;
+            box-shadow: 2px 3px 8px rgba(0,0,0,0.1);
+            transition: background 0.3s ease;
+        }
+        .pizza:hover {
+            background: #f9e9d6;
+        }
+        .pizza-name {
+            font-weight: 700;
+            font-size: 1.3em;
+            color: #803000;
+            cursor: pointer;
+        }
+        .description {
+            margin-top: 6px;
+            font-style: italic;
+            color: #6d4a2a;
+        }
+        .more-info {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #d96f45;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .extra-info {
+            margin-top: 6px;
+            font-size: 0.9em;
+            display: none;
+            color: #4b342f;
+            background: #ffe7c1;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            margin: 50px 0 30px 0;
+            color: #a03a0b;
+            font-weight: 600;
+            font-size: 1em;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 0 10px;
+            }
+            header {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Menù Pizze da Fra²</header>
+
+    <section>
+        <h2>Le Classiche</h2>
+        <div class="pizza">
+            <div class="pizza-name" onclick="toggleInfo(this)">Essenza</div>
+            <div class="description">Pomodoro, mozzarella di bufala, olio, origano.</div>
+            <div class="more-info" onclick="toggleInfo(this)">Scopri di più</div>
+            <div class="extra-info">La pizza che rappresenta l’essenza della tradizione italiana, semplice e autentica.</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Le Golose</h2>
+        <div class="pizza">
+            <div class="pizza-name" onclick="toggleInfo(this)">Dolcezza d'Alpeggio</div>
+            <div class="description">Pere, fontina, mozzarella, cipolle caramellate, brie, noci, miele a filo.</div>
+            <div class="more-info" onclick="toggleInfo(this)">Scopri di più</div>
+            <div class="extra-info">Un incontro di sapori dolci e salati, respira la fresca montagna.</div>
+        </div>
+        <div class="pizza">
+            <div class="pizza-name" onclick="toggleInfo(this)">Melanzanella</div>
+            <div class="description">Melanzane, caciocavallo, pomodoro, basilico, parmigiano.</div>
+            <div class="more-info" onclick="toggleInfo(this)">Scopri di più</div>
+            <div class="extra-info">Un omaggio ai sapori mediterranei, ricchi e forti.</div>
+        </div>
+        <div class="pizza">
+            <div class="pizza-name" onclick="toggleInfo(this)">Giallorosso Mediterraneo</div>
+            <div class="description">Datterini gialli e rossi, olive taggiasche, stracchino, mozzarella, ricotta affumicata, (prosciutto cotto).</div>
+            <div class="more-info" onclick="toggleInfo(this)">Scopri di più</div>
+            <div class="extra-info">Colori e sapori tipici liguri, mix equilibrato, gustoso e soprttuto colorato.</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Le Rustiche</h2>
+        <div class="pizza">
+            <div class="pizza-name" onclick="toggleInfo(this)">Selvatica</div>
+            <div class="description">Rape, provola, (salame e salsiccia), pomodori secchi.</div>
+            <div class="more-info" onclick="toggleInfo(this)">Scopri di più</div>
+            <div class="extra-info">Una pizza intensa e robusta, sapori forti e autentici.</div>
+        </div>
+        <div class="pizza">
+            <div class="pizza-name" onclick="toggleInfo(this)">Provolosa</div>
+            <div class="description">Zucchine, cipolle, provolone, (pancetta).</div>
+            <div class="more-info" onclick="toggleInfo(this)">Scopri di più</div>
+            <div class="extra-info">Sapori rustici e affumicati in un abbinamento goloso.</div>
+        </div>
+        <div class="pizza">
+            <div class="pizza-name" onclick="toggleInfo(this)">Rosso fuoco</div>
+            <div class="description">'Nduja, salame piccante, mozzarella.</div>
+            <div class="more-info" onclick="toggleInfo(this)">Scopri di più</div>
+            <div class="extra-info">Piccantezza e sapore del Sud in una pizza "esplosiva".</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Le Bianche</h2>
+        <div class="pizza">
+            <div class="pizza-name" onclick="toggleInfo(this)">Fiore Stracciato</div>
+            <div class="description">Fiori di zucca, ciuffi di ricotta, stracciatella, scorza di limone, (alici).</div>
+            <div class="more-info" onclick="toggleInfo(this)">Scopri di più</div>
+            <div class="extra-info">Delicatezza e carattere in un connubio tra leggerezza e decisione.</div>
+        </div>
+        <div class="pizza">
+            <div class="pizza-name" onclick="toggleInfo(this)">Zuccazù</div>
+            <div class="description">Zucca, gorgonzola, zucchine fritte, stracciatella.</div>
+            <div class="more-info" onclick="toggleInfo(this)">Scopri di più</div>
+            <div class="extra-info">Dolcezza e cremosità in perfetto contrasto tra loro.</div>
+        </div>
+    </section>
+
+    <script>
+        function toggleInfo(elem) {
+            const pizzaDiv = elem.closest('.pizza');
+            if (!pizzaDiv) return;
+            const extra = pizzaDiv.querySelector('.extra-info');
+            if (!extra) return;
+
+            if (extra.style.display === 'block') {
+                extra.style.display = 'none';
+            } else {
+                extra.style.display = 'block';
+            }
+        }
+    </script>
+
+    <footer>
+        Buon appetito! 🍕 – Serata tra amici
+    </footer>
+</body>
+</html>
